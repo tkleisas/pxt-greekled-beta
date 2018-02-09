@@ -94,8 +94,8 @@ namespace greekled
 
         "0000000000",
     ]
-    //% blockId=show_strings block="Show String %v"
-    export function showString(text: string, time: number = 500): void {
+    //% blockId=show_strings block="show string %v"
+    export function showString(text: string, time: number = 200): void {
         let strings: number[] = [0, 0, 0, 0]
         for (let d = 0; d < text.length; d++) {
             for (let x = 0; x < arr.length; x++) {
