@@ -1,0 +1,17 @@
+{
+    "name": "pxt-greekled-beta",
+    "version": "0.0.0",
+    "description": "support for writing greek characters on the led matrix of microbit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}

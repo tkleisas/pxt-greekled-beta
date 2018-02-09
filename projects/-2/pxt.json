@@ -1,0 +1,14 @@
+{
+    "name": "testgreekled",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "greekled": "file:../pxt-greekled-beta"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}
