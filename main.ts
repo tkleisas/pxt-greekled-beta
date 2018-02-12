@@ -2,7 +2,7 @@
 namespace greekled
 {
     
-    const chars = " " + "!" + '"' + "#$%&'()*+-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩabcdefghijklmnopqrstuvwxyzαάβγδεέζηήθιίΐϊκλμνξοόπρσςτυύϋφχψω"
+    const chars = " " + "!" + '"' + "#$%&'()*+-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩabcdefghijklmnopqrstuvwxyzαάβγδεέζηήθιίΐϊκλμνξοόπρσςτυύϋΰφχψωώ"
 
     const arr: number[] = [
          0, 0, 0, 0, 0,
@@ -143,6 +143,7 @@ namespace greekled
         12, 16, 16, 12, 0,          //υ
         12, 16, 17, 12, 0,          //ύ
         12, 17, 16, 13, 0,          //ϋ
+        13, 17, 17, 13, 1,          //ΰ
         14, 17, 31, 17, 14,         //φ
         18, 12, 12, 18, 0,              //χ
         3, 4, 31, 4, 3,             //ψ
