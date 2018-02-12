@@ -109,7 +109,8 @@ namespace greekled
         let c3 = 0;
         let c4 = 0;
         let c5 = 0;
-
+        let c = 0;
+            
         for (let i = 0; i <= text.length; i++) {
 
             for (let j = 0; j < 6; j++) {
@@ -122,7 +123,7 @@ namespace greekled
                     c5 = 0;
                 }
                 else {
-                    for (let c = 0; c < chars.length; c++) {
+                    for (c = 0; c < chars.length; c++) {
                         if (text.substr(i, 1).compare(chars.substr(c, 1)) == 0) {
                             c5 = arr[c * 5 + j]
                             break;
@@ -130,13 +131,27 @@ namespace greekled
                         c5 = 0;
                     }
                 }
+                if (text.length == 1)
+                {
+                    c0 = arr[c * 5];
+                    c1 = arr[c * 5 + 1];
+                    c2 = arr[c * 5 + 2];
+                    c3 = arr[c * 5 + 3];
+                    c4 = arr[c * 5 + 4];
+                }    
                 plotColumn(c4, 4)
                 plotColumn(c3, 3)
                 plotColumn(c2, 2)
                 plotColumn(c1, 1)
                 plotColumn(c0, 0)
-                basic.pause(time)
-
+                if (text.length == 1) {
+                    return
+                }
+                else
+                {
+                    
+                    basic.pause(time)
+                }    
 
             }
 
