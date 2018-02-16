@@ -153,6 +153,20 @@ namespace greekled
 
         
     ]
+
+    const num: number[] = [
+        31, 31, //0
+        0, 31,  //1
+        29, 23, //2
+        21, 31, //3
+        7, 28, //4
+        23, 29, //5
+        31, 28, //6
+        1, 31, // 7
+        27, 27, // 8
+        7, 31,  // 9
+
+    ]
     function plotColumn(n: number, column: number) {
         for (let i = 0; i < 5; i++) {
             if ((n & (1 << i)) > 0) {
@@ -222,4 +236,22 @@ namespace greekled
 
         }
     }
+
+    //% blockId=show_number block="show number %v"
+    export function showNumber(n: number): void {
+        if (n < 0 || n > 99)
+        {
+            basic.showNumber(n)
+            return
+        }
+        let c1 = n / 10;
+        let c0 = n - (n / 10);
+        plotColumn(num[c1 * 2], 0)
+        plotColumn(num[c1 * 2 + 1], 1)
+        plotColumn(0,2)
+        plotColumn(num[c0 * 2], 3)
+        plotColumn(num[c0 * 2+1],4)
+        
+    }
+
 }
