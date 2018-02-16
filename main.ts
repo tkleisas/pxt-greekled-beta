@@ -244,45 +244,54 @@ namespace greekled
             basic.showNumber(n)
             return
         }
-        let c2 = n / 100;
-        let c1 = (n- c2* 100)/10;
+        let c2 = n / 100
+        let c1 = (n- c2* 100)/10
         let offset = 0
         let c0 = n - (c2 * 100 + c1 * 10)
         if (c2 > 0)
         {
             offset = 1
-            switch (c2)
+            if (c2 == 1)
             {
-                case 1:
-                    plotColumn(16, 0)    
-                    break
-                case 2:
-                    plotColumn(8, 0)    
-                    break
-                case 3:
-                    plotColumn(4, 0)    
-                    break
-                case 4:
-                    plotColumn(2, 0)    
-                    break
-                case 5:
-                    plotColumn(1, 0)    
-                    break
-                case 6:
-                    plotColumn(24,0)    
-                    break
-                case 7:
-                    plotColumn(28,0)    
-                    break
-                case 8:
-                    plotColumn(30,0)    
-                    break
-                case 9:
-                    plotColumn(31,0)    
-                    break
-                default:
-                    break    
+                plotColumn(16,0)
             }
+            else if (c2 == 2)
+            {
+                plotColumn(8,0)
+            } 
+            else if (c2 == 3)
+            {
+                plotColumn(4,0)
+            }
+            else if (c2 == 4)
+            {
+                plotColumn(2,0)
+            }
+            else if (c2 == 5)
+            {
+                plotColumn(1,0)
+            } 
+            else if (c2 == 6)
+            {
+                plotColumn(24,0)
+            } 
+            else if (c2 == 7)
+            {
+                plotColumn(28,0)
+            } 
+            else if (c2 == 8)
+            {
+                plotColumn(30,0)
+            } 
+            else if (c2 == 9)
+            {
+                plotColumn(31,0)
+            } 
+            else
+            {
+                plotColumn(0,0)
+            }    
+            
         }    
         if (c2>0 || c1>0) {
             plotColumn(num[c1 * 2], 0+offset)
