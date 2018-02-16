@@ -239,32 +239,72 @@ namespace greekled
 
     //% blockId=show_number block="show number %v"
     export function showNumber(n: number): void {
-        if (n < 0 || n > 100)
+        if (n < 0 || n > 999)
         {
             basic.showNumber(n)
             return
         }
-        if (n == 100)
+        if (n > 100)
         {
+            
             plotColumn(31, 0)
             plotColumn(31, 1)
             plotColumn(31, 2)
             plotColumn(31, 3)
             plotColumn(31, 4)
+        }
+        let c2 = n / 100;
+        let c1 = (n- c2* 100)/10;
+        let offset = 0
+        let c0 = n - c1 * 10;
+        if (c2 > 0)
+        {
+            offset = 1
+            switch (c2)
+            {
+                case 1:
+                    plotColumn(16, 0)    
+                    break;
+                case 2:
+                    plotColumn(8, 0)    
+                    break;
+                case 3:
+                    plotColumn(4, 0)    
+                    break;
+                case 4:
+                    plotColumn(2, 0)    
+                    break;
+                case 5:
+                    plotColumn(1, 0)    
+                    break;
+                case 6:
+                    plotColumn(24,0)    
+                    break;
+                case 7:
+                    plotColumn(28,0)    
+                    break;
+                case 8:
+                    plotColumn(30,0)    
+                    break;
+                case 9:
+                    plotColumn(31,0)    
+                    break;
+                default:
+                    break;    
+            }
         }    
-        let c1 = n / 10;
-
-        let c0 = n - c1*10;
-        if (c1 > 0) {
-            plotColumn(num[c1 * 2], 0)
-            plotColumn(num[c1 * 2 + 1], 1)
+        if (c1 > 0 && c2>0) {
+            plotColumn(num[c1 * 2], 0+1)
+            plotColumn(num[c1 * 2 + 1], 1+1)
         }
         else
         {
             plotColumn(0, 0)
             plotColumn(0, 1)
-        }    
-        plotColumn(0,2)
+        } 
+        if (offset == 0) {
+            plotColumn(0, 2)
+        }
         plotColumn(num[c0 * 2], 3)
         plotColumn(num[c0 * 2+1],4)
         
