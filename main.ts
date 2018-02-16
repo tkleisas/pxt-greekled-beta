@@ -239,15 +239,31 @@ namespace greekled
 
     //% blockId=show_number block="show number %v"
     export function showNumber(n: number): void {
-        if (n < 0 || n > 99)
+        if (n < 0 || n > 100)
         {
             basic.showNumber(n)
             return
         }
+        if (n == 100)
+        {
+            plotColumn(31, 0)
+            plotColumn(31, 1)
+            plotColumn(31, 2)
+            plotColumn(31, 3)
+            plotColumn(31, 4)
+        }    
         let c1 = n / 10;
+
         let c0 = n - c1*10;
-        plotColumn(num[c1 * 2], 0)
-        plotColumn(num[c1 * 2 + 1], 1)
+        if (c1 > 0) {
+            plotColumn(num[c1 * 2], 0)
+            plotColumn(num[c1 * 2 + 1], 1)
+        }
+        else
+        {
+            plotColumn(0, 0)
+            plotColumn(0, 1)
+        }    
         plotColumn(0,2)
         plotColumn(num[c0 * 2], 3)
         plotColumn(num[c0 * 2+1],4)
