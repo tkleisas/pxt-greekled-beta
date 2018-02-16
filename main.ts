@@ -245,7 +245,7 @@ namespace greekled
             return
         }
         let c1 = n / 10;
-        let c0 = n - (n / 10);
+        let c0 = n - c1*10;
         plotColumn(num[c1 * 2], 0)
         plotColumn(num[c1 * 2 + 1], 1)
         plotColumn(0,2)
