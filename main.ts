@@ -256,7 +256,7 @@ namespace greekled
         let c2 = n / 100;
         let c1 = (n- c2* 100)/10;
         let offset = 0
-        let c0 = n - c2*100 - c1 * 10;
+        let c0 = n - c2 * 100 - c1 * 10;
         if (c2 > 0)
         {
             offset = 1
@@ -293,9 +293,9 @@ namespace greekled
                     break;    
             }
         }    
-        if (c1 > 0 && c2>0) {
-            plotColumn(num[c1 * 2], 0+1)
-            plotColumn(num[c1 * 2 + 1], 1+1)
+        if (c2>0 || c1>0) {
+            plotColumn(num[c1 * 2], 0+offset)
+            plotColumn(num[c1 * 2 + 1], 1+offset)
         }
         else
         {
