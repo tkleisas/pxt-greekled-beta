@@ -1,6 +1,6 @@
 # pxt-greekled-beta
 
-Support for writing greek characters on the led matrix of microbit. Based on https://makecode.microbit.org/pkg/mbitfun/pxt-katakana 
+Support for writing greek characters on the led matrix of microbit. Inspired by japanese katakana text package on https://makecode.microbit.org/pkg/mbitfun/pxt-katakana . Initially the code from this project was used as a starting point but eventually the code was written from scratch. 
 
 This pxt-microbit package contains just one block:
 showString that enables the sending of greek characters and has the following signature:
