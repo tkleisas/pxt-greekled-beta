@@ -5,7 +5,7 @@ Support for writing greek characters on the led matrix of microbit. Inspired by 
 This pxt-microbit package contains two blocks:
 1. showString that enables the display of greek characters and has the following signature:
 function showString(text: string, time: number = 200): void
-2. showNumber that enables the display of numbers up to three digits.
+2. showNumber that enables the display of numbers up to three digits and has the following signature:
 function showNumber(n: number): void
 
 
