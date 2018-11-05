@@ -244,10 +244,10 @@ namespace greekled
             basic.showNumber(n)
             return
         }
-        let c2 = n / 100
-        let c1 = (n- c2* 100)/10
+        let c2 = Math.floor(n / 100)
+        let c1 = Math.floor((n - (c2 * 100)) / 10)
         let offset = 0
-        let c0 = n - (c2 * 100 + c1 * 10)
+        let c0 = Math.floor(n - c2 * 100 - c1 * 10)
         if (c2 > 0)
         {
             offset = 1
